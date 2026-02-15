@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBH Academic - Acesso</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFFDD0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #C8A2C8;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cliente {
+            background-color: #C8A2C8;
+            color: white;
+        }
+
+        .cliente:hover {
+            opacity: 0.85;
+        }
+
+        .funcionario {
+            background-color: #a88aa8;
+            color: white;
+        }
+
+        .funcionario:hover {
+            opacity: 0.85;
+        }
+
+        .form-box {
+            display: none;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .voltar {
+            background-color: #ddd;
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>SBH Academic</h1>
+        <p>Portal Oficial de Acesso</p>
+
+        <div id="inicio">
+            <button class="btn cliente" onclick="mostrarCliente()">Sou Cliente</button>
+            <button class="btn funcionario" onclick="mostrarFuncionario()">Sou Funcionário</button>
+        </div>
+
+        <div id="cliente" class="form-box">
+            <h3>Área do Cliente</h3>
+            <input type="email" placeholder="E-mail">
+            <input type="password" placeholder="Senha">
+            <a href="sbh clientes.html">
+                <button class="btn cliente">Entrar</button> </a>
+
+            <button class="btn voltar" onclick="voltar()">Voltar</button>
+        </div>
+
+        <div id="funcionario" class="form-box">
+            <h3>Área do Funcionário</h3>
+            <input type="text" placeholder="Usuário">
+            <input type="password" placeholder="Senha">
+            <a href="sbh.html">
+                <button class="btn funcionario">Entrar</button> </a>
+            <button class="btn voltar" onclick="voltar()">Voltar</button>
+        </div>
+
+    </div>
+
+    <script>
+        function mostrarCliente() {
+            document.getElementById("inicio").style.display = "none";
+            document.getElementById("cliente").style.display = "block";
+        }
+
+        function mostrarFuncionario() {
+            document.getElementById("inicio").style.display = "none";
+            document.getElementById("funcionario").style.display = "block";
+        }
+
+        function voltar() {
+            document.getElementById("inicio").style.display = "block";
+            document.getElementById("cliente").style.display = "none";
+            document.getElementById("funcionario").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

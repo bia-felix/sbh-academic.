@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBH Academic - Portal Interno</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFFDD0;
+            color: #ffffff;
+        }
+
+        header {
+
+
+            background: #FFFDD0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .banner {
+            background-image: url("SBH Academic.png");
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            background: #C8A2C8;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #FFFDD0;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+        section {
+            display: none;
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .card {
+            background: #C8A2C8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #C8A2C8;
+        }
+
+        .horario-card {
+            border-left: 5px solid #C8A2C8;
+        }
+
+        .tabela-horarios {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .tabela-horarios th {
+            background-color: #C8A2C8;
+            color: #0f172a;
+            padding: 10px;
+        }
+
+        .tabela-horarios td {
+            border: 1px solid #334155;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .tabela-horarios tr:nth-child(even) {
+            background-color: #1e293b;
+        }
+
+        .obs {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #FFFDD0;
+        }
+
+        button {
+            background-color: #22c55e;
+            color: #FFFDD0;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #16a34a;
+        }
+
+        footer {
+            background: #C8A2C8;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="banner">
+        <div class="overlay">
+    </header>
+
+
+
+    <nav>
+        <a onclick="mostrar('inicio')">Início</a>
+        <a onclick="mostrar('reunioes')">Reuniões</a>
+        <a onclick="mostrar('festas')">Festas</a>
+        <a onclick="mostrar('funcionario')">Área do Funcionário</a>
+        <a onclick="mostrar('folgas')">Folgas</a>
+        <a onclick="mostrar('normas')">Normas</a>
+
+    </nav>
+
+
+    <section id="inicio" class="active">
+        <h2>Bem-vindo</h2>
+        <div class="card">
+            <p>Acompanhe informações internas, eventos e comunicados oficiais da TecOperação.</p>
+        </div>
+    </section>
+
+    <section id="reunioes">
+        <h2>Reuniões</h2>
+        <div class="card">
+            <p>📅 Reunião Geral – Toda primeira segunda-feira do mês</p>
+            <p>📅 Reunião de Equipe – Semanal</p>
+        </div>
+    </section>
+
+    <section id="festas">
+        <h2>Festas da Empresa</h2>
+        <div class="card">
+            <p>🎉 Confraternização Anual</p>
+            <p>🎂 Aniversariantes do Mês</p>
+            <p>⚠️ Eventos corporativos seguem as normas internas de conduta.</p>
+        </div>
+    </section>
+
+    <section id="funcionario">
+        <h2>Área do Funcionário</h2>
+        <div class="card">
+            <p>✔ Controle de presença</p>
+            <p>✔ Registro de faltas</p>
+            <p>✔ Solicitação de documentos</p>
+        </div>
+    </section>
+
+    <section id="folgas">
+        <h2>Folgas</h2>
+        <div class="card">
+            <p>🗓 Solicitação de férias</p>
+            <p>🗓 Banco de horas</p>
+            <p>🗓 Compensações</p>
+        </div>
+    </section>
+
+    <section id="normas">
+        <h2>Normas de Conduta e Atendimento</h2>
+
+        <div class="card">
+            <h3>🚫 Política de Prevenção ao Uso de Drogas, Álcool e Substâncias Indevidas</h3>
+            <ul>
+                <li>É proibido o uso de bebidas alcoólicas ou drogas ilícitas antes ou durante o expediente.</li>
+                <li>É proibido comparecer ao trabalho sob efeito dessas substâncias.</li>
+                <li>Não é permitido portar, comercializar ou incentivar o uso dentro da empresa.</li>
+                <li>Inclui-se também o uso indevido de anabolizantes ("bombas") e medicamentos injetáveis para
+                    emagrecimento sem prescrição médica.</li>
+                <li>O descumprimento poderá resultar em advertência, suspensão ou desligamento.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>⚠️ Sobre Anabolizantes e "Canetas Emagrecedoras"</h3>
+            <p>O uso de anabolizantes sem acompanhamento médico pode causar:</p>
+            <ul>
+                <li>Problemas cardíacos</li>
+                <li>Alterações hormonais graves</li>
+                <li>Instabilidade emocional</li>
+                <li>Danos ao fígado</li>
+            </ul>
+
+            <p>O uso inadequado de medicamentos injetáveis para emagrecimento pode causar:</p>
+            <ul>
+                <li>Hipoglicemia</li>
+                <li>Complicações gastrointestinais</li>
+                <li>Riscos metabólicos</li>
+                <li>Dependência psicológica</li>
+            </ul>
+
+            <p>A empresa orienta que qualquer tratamento médico seja realizado apenas com prescrição e acompanhamento
+                profissional.</p>
+        </div>
+
+        <div class="card">
+            <h3>📋 Normas de Conduta Profissional</h3>
+            <ul>
+                <li>Manter postura ética e profissional.</li>
+                <li>Respeitar colegas e clientes.</li>
+                <li>Preservar informações confidenciais.</li>
+                <li>Cumprir horários e responsabilidades.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>🦺 Segurança do Trabalho</h3>
+
+            <p>A SBH Academic prioriza a integridade física e mental de todos os colaboradores.
+                O cumprimento das normas de segurança é obrigatório.</p>
+
+            <ul>
+                <li>Utilizar corretamente os Equipamentos de Proteção Individual (EPIs), quando aplicável.</li>
+                <li>Não operar máquinas ou sistemas sob efeito de álcool, drogas ou medicamentos que alterem a atenção.
+                </li>
+                <li>Comunicar imediatamente qualquer situação de risco ao supervisor.</li>
+                <li>Participar dos treinamentos obrigatórios de segurança.</li>
+                <li>Seguir protocolos técnicos e operacionais estabelecidos.</li>
+            </ul>
+
+            <p><strong>Atenção:</strong> O uso de substâncias que alterem reflexos, foco ou julgamento
+                compromete diretamente a segurança individual e coletiva, aumentando o risco de acidentes.</p>
+        </div>
+
+        <div class="card">
+            <h3>🤝 Normas de Atendimento</h3>
+            <ul>
+                <li>Atender com educação e clareza.</li>
+                <li>Seguir padrão de comunicação institucional.</li>
+                <li>Resolver conflitos de forma respeitosa.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🎥 Vídeos Educativos</h3>
+
+            <p>Assista aos conteúdos informativos sobre prevenção:</p>
+
+            <iframe width="100%" height="315" src="https://www.youtube.com/watch?v=95-fX_4L6iU" title="Vídeo Educativo"
+                frameborder="0" allowfullscreen></iframe>
+
+            <br><br>
+
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Vídeo Educativo"
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="card">
+            <h3>🛟 Canal de Apoio</h3>
+            <p>O RH oferece orientação confidencial e encaminhamento para suporte especializado quando necessário.</p>
+        </div>
+
+
+
+
+        <button onclick="confirmarLeitura()">Li e estou ciente das normas</button>
+        <p id="mensagem"></p>
+    </section>
+    <footer>
+        <p>© 2026 SBH Academic- Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function mostrar(secao) {
+            let secoes = document.querySelectorAll("section");
+            secoes.forEach(s => s.classList.remove("active"));
+            document.getElementById(secao).classList.add("active");
+        }
+
+        function confirmarLeitura() {
+            document.getElementById("mensagem").innerHTML =
+                "Confirmação registrada com sucesso.";
+        }
+    </script>
+
+
+</body>
+
+</html>
