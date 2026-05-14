@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -72,53 +71,3 @@
     <div id="area-secreta">
         <h2 style="text-align: center; color: #4834d4;">Feedbacks Internos 👑</h2>
         <div id="l"></div>
-    </div>
-
-    <footer style="text-align: center;">
-        <button onclick="acessoAdmin()" style="background:none; box-shadow:none; color:#a29bfe; font-size:0.8rem; font-weight:normal; margin-top:20px;">🔒 Administração</button>
-    </footer>
-</div>
-
-<script>
-    const f=document.getElementById('f'), l=document.getElementById('l');
-    const senhaCorreta = "suco123";
-
-    f.onsubmit=(e)=>{
-        e.preventDefault();
-        const d={
-            n:document.getElementById('n').value||"Cliente", 
-            s:document.getElementById('s').value, 
-            nt:document.querySelector('input[name="st"]:checked')?.value||"0", 
-            m:document.getElementById('m').value,
-            dt:new Date().toLocaleString('pt-BR')
-        };
-        let fb=JSON.parse(localStorage.getItem('fb')||"[]"); 
-        fb.unshift(d); 
-        localStorage.setItem('fb', JSON.stringify(fb));
-        alert("Sua opinião foi enviada! 💜"); 
-        f.reset(); 
-        if(document.getElementById('area-secreta').style.display === 'block') ex();
-    };
-
-    function ex(){
-        let fb=JSON.parse(localStorage.getItem('fb')||"[]");
-        l.innerHTML=fb.map(i=>`
-            <div class="feedback-card">
-                <strong>${i.n}</strong> - ${i.s}<br>
-                <span style="color: #6c5ce7;">${'★'.repeat(i.nt)}</span><br>
-                <p style="margin-top: 5px; font-size: 0.85rem; color: #636e72;">"${i.m || 'Sem comentários'}"</p>
-                <small style="font-size: 0.7rem; color: #b2bec3;">${i.dt}</small>
-            </div>
-        `).join('');
-    }
-
-    function acessoAdmin(){ 
-        if(prompt("Senha de acesso:") === senhaCorreta){
-            document.getElementById('area-secreta').style.display='block'; 
-            ex();
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-        }
-    }
-</script>
-</body>
-</html>
